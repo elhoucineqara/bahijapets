@@ -21,11 +21,20 @@ export const metadata = {
     siteName: 'BahijaPets',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://bahijapets.vercel.app/og-image.png',
+        width: 1024,
+        height: 1024,
+        alt: 'BahijaPets - Premium Pet Store',
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'BahijaPets - Best Pet Deals & Expert Reviews',
     description: 'Discover a rigorous selection of the best pet products available online.',
+    images: ['https://bahijapets.vercel.app/og-image.png'],
   },
   robots: {
     index: true,
