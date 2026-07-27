@@ -1,0 +1,181 @@
+.catalogPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 40px 24px 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--primary);
+  transform: translateX(-4px);
+}
+
+/* Banner section */
+.banner {
+  padding: 60px 40px;
+  border-radius: var(--border-radius-lg);
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent), rgba(11, 21, 40, 0.4);
+  border: 1px solid var(--glass-border);
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Custom glow effects for different catalogs */
+.bannerDogEssentials {
+  background: radial-gradient(circle at top right, rgba(20, 184, 166, 0.25), rgba(249, 115, 22, 0.05)), var(--glass-bg);
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+.bannerCatTrees {
+  background: radial-gradient(circle at top right, rgba(255, 0, 127, 0.2), rgba(168, 85, 247, 0.1)), var(--glass-bg);
+  border-color: rgba(255, 0, 127, 0.3);
+}
+
+.bannerPetTech {
+  background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.25), rgba(0, 210, 255, 0.1)), var(--glass-bg);
+  border-color: rgba(168, 85, 247, 0.3);
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bannerDogEssentials .title {
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bannerCatTrees .title {
+  background: linear-gradient(135deg, var(--text-primary) 30%, #ff007f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bannerPetTech .title {
+  background: linear-gradient(135deg, var(--text-primary) 30%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Category Filter bar */
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.categoryBtn {
+  padding: 8px 16px;
+  background: rgba(11, 21, 40, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categoryBtn:hover {
+  background: rgba(11, 21, 40, 0.6);
+  color: var(--text-primary);
+}
+
+.categoryBtnActive {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.bannerCatTrees .categoryBtnActive {
+  background: #ff007f;
+  border-color: #ff007f;
+  box-shadow: 0 4px 12px rgba(255, 0, 127, 0.25);
+}
+
+.bannerPetTech .categoryBtnActive {
+  background: #a855f7;
+  border-color: #a855f7;
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.25);
+}
+
+.sortSelect {
+  padding: 8px 16px;
+  background: rgba(11, 21, 40, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.sortSelect:focus {
+  border-color: var(--primary);
+}
+
+/* Empty State */
+.emptyState {
+  padding: 60px 40px;
+  text-align: center;
+  background: rgba(11, 21, 40, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  color: var(--text-secondary);
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  gap: 16px;
+}

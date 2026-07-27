@@ -1,0 +1,230 @@
+.navbarContainer {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 72px;
+  padding: 12px 0;
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.brandLogoImg {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandName {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.goldText {
+  color: var(--accent-gold);
+}
+
+.navSearchBar {
+  flex: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 11px 16px 11px 44px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.navLinkBtn {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.navLinkBtn:hover {
+  color: var(--text-primary);
+  background: var(--glass-border);
+}
+
+.themeToggleBtn,
+.menuToggleBtn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.themeToggleBtn:hover,
+.menuToggleBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavActions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 16px 16px;
+  border-top: 1px solid var(--glass-border);
+  background: var(--bg-secondary);
+}
+
+.mobileNavLink {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+
+.mobileNavLink:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 900px) {
+  .navLinkBtn {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .navSearchBar {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand actions"
+      "search search";
+    gap: 12px;
+    min-height: unset;
+    padding: 12px 0;
+  }
+
+  .navBrand {
+    grid-area: brand;
+    min-width: 0;
+  }
+
+  .navSearchBar {
+    grid-area: search;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileNavActions {
+    grid-area: actions;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandName {
+    font-size: 1.05rem;
+  }
+
+  .brandLogoImg {
+    height: 36px;
+    width: 36px;
+  }
+
+  .searchInput {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .navSearchBar {
+    order: 3;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .brandLogoImg {
+    height: 48px; /* Slightly smaller on very small screens */
+  }
+  .brandName {
+    font-size: 1.1rem;
+  }
+}

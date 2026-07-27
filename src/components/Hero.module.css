@@ -1,0 +1,126 @@
+.heroSection {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+}
+
+.heroBgImage {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  transition: opacity 2s ease-in-out, transform 8s linear;
+}
+
+.heroBgImage.active {
+  opacity: 1;
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.heroBgImage.inactive {
+  opacity: 0;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.4) 100%);
+  z-index: 3;
+}
+
+[data-theme='light'] .heroOverlay {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.textWrapper {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeContainer {
+  margin-bottom: 24px;
+}
+
+.badgeGold {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #ff007f 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+  animation: float 3s ease-in-out infinite;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+[data-theme='light'] .heroTitle {
+  color: #0f172a;
+}
+
+.primaryText {
+  background: linear-gradient(135deg, var(--primary) 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.heroDescription {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+[data-theme='light'] .heroDescription {
+  color: rgba(0,0,0,0.8);
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 60vh;
+  }
+}

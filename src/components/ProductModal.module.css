@@ -1,0 +1,230 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 10, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modalContent {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.closeBtn:hover {
+  background: var(--glass-border);
+  transform: scale(1.05);
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  gap: 40px;
+}
+
+.modalLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modalImageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: #0c101b;
+  border: 1px solid var(--glass-border);
+}
+
+.modalImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalPricingBox {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.modalPriceInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceTitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.priceTag {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.btnLarge {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius-sm);
+}
+
+.affiliateDisclosure {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.modalRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCategory {
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.modalRating {
+  margin-bottom: 24px;
+}
+
+.ratingText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-left: 6px;
+}
+
+.modalSection {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.modalDescription {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.featuresList {
+  list-style-type: square;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.prosConsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.prosTitle {
+  color: var(--success);
+}
+
+.consTitle {
+  color: var(--danger);
+}
+
+.feedbackList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.proItem,
+.conItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.proIcon {
+  color: var(--success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.conIcon {
+  color: var(--danger);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    padding: 24px;
+  }
+
+  .modalGrid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .prosConsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

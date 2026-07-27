@@ -1,0 +1,173 @@
+.footerSection {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+  padding: 80px 0 0;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.footerSection::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--accent-gold), transparent);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1.3fr;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.footerLinksWrapper {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.brandLogoImgFooter {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brandName {
+  letter-spacing: -0.5px;
+}
+
+.goldText {
+  color: var(--accent-gold);
+}
+
+.brandTagline {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.footerLinksTitle {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.footerLinkBtn {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  padding: 6px 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+  position: relative;
+}
+
+.footerLinkBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent-gold));
+  transition: width 0.3s ease;
+}
+
+.footerLinkBtn:hover {
+  color: #fff;
+  transform: translateX(8px);
+}
+
+.footerLinkBtn:hover::after {
+  width: 100%;
+}
+
+.adminFooterLink {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
+
+.adminFooterLink:hover {
+  opacity: 1;
+}
+
+.footerDisclaimerBox {
+  margin-top: 24px;
+}
+
+.disclosure {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.emailInput {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+.emailInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.emailInput:focus {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 24px 0;
+  font-size: 0.85rem;
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 768px) {
+  .footerSection {
+    margin-top: 48px;
+    padding: 40px 0 0;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footerLinksWrapper {
+    flex-direction: column;
+    gap: 32px;
+    justify-content: flex-start;
+  }
+}
