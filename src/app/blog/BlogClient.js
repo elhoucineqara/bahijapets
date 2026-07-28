@@ -35,7 +35,7 @@ export default function BlogClient({ articles }) {
         ) : (
           <>
             <div style={{ marginBottom: '40px' }}>
-              <AdsterraAd adKey="7ec512f558f75ba3b9346bfce3524d32" width={300} height={250} />
+              <AdsterraAd adKey="2343f85537b9c5540c84d1d0e8892ebc" width={300} height={250} />
             </div>
             <div className={styles.masonryGrid}>
             {articles.map((article, index) => (

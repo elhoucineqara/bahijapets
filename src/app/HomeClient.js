@@ -40,7 +40,7 @@ export default function HomeClient({ categories, subcategories, hotDeals, latest
       <Hero />
       
       <div className="container" style={{ marginTop: '20px' }}>
-        <AdsterraAd adKey="79af0c6c2397cdbc34a29eab4d2051c0" width={728} height={90} />
+        <AdsterraAd adKey="718af843b5cd3d1e7c374e8a8f2ce12c" width={728} height={90} />
       </div>
 
       {/* Features Section */}

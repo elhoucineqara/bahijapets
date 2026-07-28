@@ -13,7 +13,7 @@ export default function AdsterraNative() {
     script.id = 'adsterra-native-script';
     script.async = true;
     script.setAttribute('data-cfasync', 'false');
-    script.src = 'https://pl30581879.effectivecpmnetwork.com/a0aa0ae546c1bf20ae632c36a2b1ddb5/invoke.js';
+    script.src = 'https://pl30582059.effectivecpmnetwork.com/2452e52871f51178d2b1da848bc4f77b/invoke.js';
     
     document.body.appendChild(script);
 
@@ -24,7 +24,7 @@ export default function AdsterraNative() {
 
   return (
     <div style={{ margin: '20px auto', display: 'flex', justifyContent: 'center' }}>
-      <div id="container-a0aa0ae546c1bf20ae632c36a2b1ddb5" ref={containerRef}></div>
+      <div id="container-2452e52871f51178d2b1da848bc4f77b" ref={containerRef}></div>
     </div>
   );
 }

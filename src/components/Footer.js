@@ -102,7 +102,7 @@ export default function Footer() {
       </div>
 
       <div className="container" style={{ marginTop: '20px' }}>
-        <AdsterraAd adKey="892947e821d6fc17e756be3a23a02fb6" width={320} height={50} />
+        <AdsterraAd adKey="0a27d11d1fe850d0da783fca5b9b0836" width={320} height={50} />
       </div>
 
       <div className={styles.footerBottom}>
