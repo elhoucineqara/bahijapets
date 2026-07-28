@@ -23,9 +23,9 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://bahijapets.vercel.app/og-image.png',
-        width: 1024,
-        height: 1024,
+        url: 'https://bahijapets.vercel.app/api/og',
+        width: 1200,
+        height: 630,
         alt: 'BahijaPets - Premium Pet Store',
       }
     ],
@@ -34,7 +34,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'BahijaPets - Best Pet Deals & Expert Reviews',
     description: 'Discover a rigorous selection of the best pet products available online.',
-    images: ['https://bahijapets.vercel.app/og-image.png'],
+    images: ['https://bahijapets.vercel.app/api/og'],
   },
   robots: {
     index: true,
