@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import AdsterraAd from '@/components/AdsterraAd';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -98,6 +99,10 @@ export default function Footer() {
             {status === 'error' && <div style={{ color: '#ef4444', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '4px' }}><AlertCircle size={14}/> {message}</div>}
           </form>
         </div>
+      </div>
+
+      <div className="container" style={{ marginTop: '20px' }}>
+        <AdsterraAd adKey="892947e821d6fc17e756be3a23a02fb6" width={320} height={50} />
       </div>
 
       <div className={styles.footerBottom}>

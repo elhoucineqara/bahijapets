@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useTheme } from '@/hooks/useTheme';
+import AdsterraAd from '@/components/AdsterraAd';
 import styles from './blog.module.css';
 
 export default function BlogClient({ articles }) {
@@ -32,7 +33,11 @@ export default function BlogClient({ articles }) {
             <p>No articles published yet. Check back soon!</p>
           </div>
         ) : (
-          <div className={styles.masonryGrid}>
+          <>
+            <div style={{ marginBottom: '40px' }}>
+              <AdsterraAd adKey="7ec512f558f75ba3b9346bfce3524d32" width={300} height={250} />
+            </div>
+            <div className={styles.masonryGrid}>
             {articles.map((article, index) => (
               <Link 
                 href={`/blog/${article.slug}`} 
@@ -63,6 +68,7 @@ export default function BlogClient({ articles }) {
               </Link>
             ))}
           </div>
+          </>
         )}
       </main>
       

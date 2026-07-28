@@ -10,6 +10,8 @@ import AnimatedSection from '@/components/AnimatedSection';
 import Footer from '@/components/Footer';
 import { useTheme } from '@/hooks/useTheme';
 import { useState, useMemo } from 'react';
+import AdsterraAd from '@/components/AdsterraAd';
+import AdsterraNative from '@/components/AdsterraNative';
 import styles from './home.module.css';
 
 export default function HomeClient({ categories, subcategories, hotDeals, latestArticles = [], testimonials = [] }) {
@@ -36,6 +38,10 @@ export default function HomeClient({ categories, subcategories, hotDeals, latest
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <Hero />
+      
+      <div className="container" style={{ marginTop: '20px' }}>
+        <AdsterraAd adKey="79af0c6c2397cdbc34a29eab4d2051c0" width={728} height={90} />
+      </div>
 
       {/* Features Section */}
       <section className="container" style={{ marginTop: '80px', marginBottom: '80px' }}>
@@ -165,6 +171,10 @@ export default function HomeClient({ categories, subcategories, hotDeals, latest
           </div>
         </AnimatedSection>
       </section>
+
+      <div className="container" style={{ margin: '20px auto' }}>
+        <AdsterraNative />
+      </div>
 
       {/* Hot Deals Area */}
       <main className={`container ${styles.mainContent}`}>
